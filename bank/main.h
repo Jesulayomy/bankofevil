@@ -7,5 +7,8 @@
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
+#include "structures.h"
+
+unsigned long long getacc();
 
 #endif
