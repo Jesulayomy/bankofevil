@@ -3,6 +3,7 @@
 int main(void)
 {
 	int menu;
+
 	printf("Welcome to BOE. What would you like to do today\n"
 			"1. New Account(in construction)	2. Update account\n"
 			"3. View profile			4. Transactions(in construction)\n"
@@ -94,5 +95,7 @@ switch (menu)
 }	/* end of switch */
 scanf("%d", &menu);
 }	/* end of while loop */
+
+
 	return (0);
 }
