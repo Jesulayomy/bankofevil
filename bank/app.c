@@ -61,7 +61,7 @@ switch (menu)
 	/* Gender */
 	printf("Enter your gender:\n");
 	scanf("%c", &layo.gender);
-	while (layo.gender != 'M' || layo.gender != 'F' || layo.gender != 'm' || layo.gender != 'f')
+	while (layo.gender != 70 || layo.gender != 102 || layo.gender != 77 || layo.gender != 109)
 	{
 		printf("There are two genders, retry\n");
 		scanf("%c", &layo.gender);
