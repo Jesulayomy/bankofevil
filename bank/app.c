@@ -5,9 +5,9 @@ int main(void)
 	int menu;
 
 	printf("Welcome to BOE. What would you like to do today\n"
-			"1. New Account(in construction)	2. Update account\n"
-			"3. View profile			4. Transactions(in construction)\n"
-			"5. Customer list(in construction)	6. Exit\n");
+		"1. New Account(in construction)	2. Update account\n"
+		"3. View profile			4. Transactions(in construction)\n"
+		"5. Customer list(in construction)	6. Exit\n");
 	scanf("%d", &menu);
 
 	/* Layo's fixed structs */
