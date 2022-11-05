@@ -24,57 +24,56 @@ int main(void)
 	layo.card_no = getacc();
 while (menu != 6)	//loop menu
 {
-switch (menu)
-{
-	case 1:
+	if (menu == 1)
+	{
 		printf("U N D E R  C O N S T R U C T I O N\n");
 		break;
-	case 2:
-	/* Assignable structs */
-	/* Date of birth */
-	printf("Enter your date of birth (dd):\n");
-	scanf("%d", &layo.dob);
-	while (layo.dob <=0 || layo.dob >= 32)
+	}
+	else if (menu == 2)
 	{
-		printf("You have entered an invalid date, please retry\n");
+			/* Assignable structs */
+			/* Date of birth */
+		printf("Enter your date of birth (dd):\n");
 		scanf("%d", &layo.dob);
-	}
-	printf("Enter your month of birth (mm):\n");
-	scanf("%d", &layo.mob);
-	while (layo.dob < 1 || layo.mob > 12)
-	{
-		printf("You have entered an invalid month, please retry\n");
+		while (layo.dob <= 0 || layo.dob >= 32)
+		{
+			printf("You have entered an invalid date, please retry\n");
+			scanf("%d", &layo.dob);
+		}
+		printf("Enter your month of birth (mm):\n");
 		scanf("%d", &layo.mob);
-	}
-	printf("Enter your year of birth (yy):\n");
-	scanf("%d", &layo.yob);
-	while (layo.yob < 1880 || layo.yob > 2022)
-	{
-		printf("You have entered an invalid year, please retry\n");
+		while (layo.dob < 1 || layo.mob > 12)
+		{
+			printf("You have entered an invalid month, please retry\n");
+			scanf("%d", &layo.mob);
+		}
+		printf("Enter your year of birth (yy):\n");
 		scanf("%d", &layo.yob);
-	}
-	layo.age = 2022 - layo.yob;
-	if (layo.age < 10)	/* Age limit */
-	{
-		printf("You are not eligible for this program as you are %d years old\n", layo.age);
-		return (0);
-	}
-	/* Gender */
-	printf("Enter your gender:\n");
-	scanf("%c", &layo.gender);
-	while (layo.gender != 70 || layo.gender != 102 || layo.gender != 77 || layo.gender != 109)
-	{
-		printf("There are two genders, retry\n");
+		while (layo.yob < 1880 || layo.yob > 2022)
+		{
+			printf("You have entered an invalid year, please retry\n");
+			scanf("%d", &layo.yob);
+		}
+		layo.age = 2022 - layo.yob;
+		if (layo.age < 10)	/* Age limit */
+		{
+			printf("You are not eligible for this program as you are %d years old\n", layo.age);
+			return (0);
+		}
+			/* Gender */
+		printf("Enter your gender, M/F:\n");
 		scanf("%c", &layo.gender);
-	}
-	/* Numbers */
-	printf("Enter your phone number (begin with country code without +):\n");
-	scanf("%lli", &layo.phone_number);
-	printf("Enter your National Identification Number:\n");
-	scanf("%lli", &layo.nin);
-	/* Struct assign end */
+		printf("Gender was uh: %c\n", layo.gender);
 
-	case 3:
+		/* Numbers */
+		printf("Enter your phone number (begin with country code without +):\n");
+		scanf("%lli", &layo.phone_number);
+		printf("Enter your National Identification Number:\n");
+		scanf("%lli", &layo.nin);
+		/* Struct assign end */
+	}
+	else if (menu == 3)
+	{
 	/* Profiles */
 	printf("Hello, %s %s %s ", layo.first_name, layo.middle_name, layo.last_name);
 	printf("From: %s \n", layo.nationality);
@@ -84,16 +83,23 @@ switch (menu)
 	printf("%lli is your National identification number.\n", layo.nin);
 	printf("%lli is your card number.\n", layo.card_no);
 	break;
-	case 4:
+	}
+	else if (menu == 4)
+	{
 	printf("T R A N S A C T I O N S  I N  C O N S T R U C T I O N\n");
 	break;
-	case 5:
+	}
+	else if (menu == 5)
+	{
 	printf("L I S T  I S  I N  C O N S T R U C T I O N\n");
-	break;
-	default:
+	}
+	else
+	{
 	printf("Invalid selection\n");
-}	/* end of switch */
-scanf("%d", &menu);
+	}
+	/* end of ifs */
+	printf("Enter a service or x to exit\n");
+	scanf("%d", &menu);
 }	/* end of while loop */
 
 
