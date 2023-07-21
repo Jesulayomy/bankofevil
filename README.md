@@ -2,4 +2,4 @@
 
 >- Development of this project is currently on hold.
 
-Please sumit any ideas in the discussion section or email me @jesulayomy@gmail.com (we could work together)
+Please sumit any ideas in the discussion section.
